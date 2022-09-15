@@ -7,45 +7,55 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./main.js" defer></script>
 </head>
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <div class="main-view">
+    <div class="left">
+      <div class="card-container" id="card-front">
+        <img src="./images/card-logo.svg" alt="Card Logo">
+        <div class="card-details">
+          <span id="card-number"> <span>0000</span> <span>0000</span> <span>0000</span> <span>0000</span></span>
+          <div class="card-details-bottom">
+            <span id="holder-name">jane applessed</span>
+            <span id="expiry">00/00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-container" id="card-back">
+        <span id="cvv">000</span>
+      </div>
+    </div>
+    <div class="right">
+      <form>
+        <div>
+          <label for="holder-name">CARDHOLDER NAME</label>
+          <input type="text" id="holder-name" name="holder-name" required>
+        </div>
+         <div>
+          <label for="holder-name">CARDHOLDER NAME</label>
+          <input type="text" id="holder-name" name="holder-name" required>
+        </div>
+         <div>
+          <div>
+            <label for="holder-name">CARDHOLDER NAME</label>
+            <input type="text" id="holder-name" name="holder-name" required>
+            <input type="text" id="holder-name" name="holder-name" required>
+          </div>
+          <div>
+             <label for="holder-name">CARDHOLDER NAME</label>
+              <input type="text" id="holder-name" name="holder-name" required>
+          </div>
+        </div>
 
-  000
+        <button>Confirm</button>
+        
 
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+      </form>
+    </div>
   </div>
+
 </body>
 </html>

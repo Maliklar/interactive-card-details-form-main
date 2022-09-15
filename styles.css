@@ -1,4 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --activeInputBorder: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --inputErrors: hsl(0, 100%, 66%);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --LightGrayishViolet: hsl(270, 3%, 87%);
+    --DarkGrayishViolet: hsl(279, 6%, 55%);
+    --VeryDarkViolet: hsl(278, 68%, 11%);
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+*{
+    box-sizing: border-box;
+}
 body{
+    height: 100vh;
+    min-width: 100vw;
     padding: 0px;
     margin: 0px;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.main-view{
+    height: 100vh;
+    width: 100%;
+    max-width: 1110px;
+    gap: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 38px;
+    flex: 50%;
+}
+
+#card-back{
+    align-self: flex-end;
+    background-image: url(./images/bg-card-back.png);
+}
+
+#card-front{
+    background-image: url(./images/bg-card-front.png);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+#card-number{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+}
+
+.card-details-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#holder-name{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+}
+
+.card-container{
+    width: 447px;
+    height: 245px;
+    color: var(--White);
+    position: relative;
+}
+
+#cvv{
+    position: absolute;
+    right: 12.8%;
+    top: 45.5%;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .mobile {
+       display: block;
+    }
 }
