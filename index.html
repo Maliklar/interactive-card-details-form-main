@@ -20,7 +20,7 @@
           <span id="card-number"> <span>0000</span> <span>0000</span> <span>0000</span> <span>0000</span></span>
           <div class="card-details-bottom">
             <span id="holder-name">jane applessed</span>
-            <span id="expiry">00/00</span>
+            <span id="expiry"><span id="month">00</span>/ <span id="year">00</span></span>
           </div>
         </div>
       </div>
@@ -29,24 +29,27 @@
       </div>
     </div>
     <div class="right">
-      <form>
-        <div>
-          <label for="holder-name">CARDHOLDER NAME</label>
-          <input type="text" id="holder-name" name="holder-name" required>
+      <form id="form">
+        <div class="form-input">
+          <label for="holder-name" >CARDHOLDER NAME</label>
+          <input type="text" id="holder-name" name="holder-name" placeholder="e.g. Jane Appleseed" oninput="nameChanged(this.value)" required>
         </div>
-         <div>
-          <label for="holder-name">CARDHOLDER NAME</label>
-          <input type="text" id="holder-name" name="holder-name" required>
+         <div class="form-input">
+          <label for="holder-name">CARD NUMBER</label>
+          <input type="text" id="holder-name" name="holder-name" placeholder="e.g. 1234 5678 9123 0000" maxlength="16" oninput="cardNumberChanged(this.value)" required>
         </div>
-         <div>
-          <div>
-            <label for="holder-name">CARDHOLDER NAME</label>
-            <input type="text" id="holder-name" name="holder-name" required>
-            <input type="text" id="holder-name" name="holder-name" required>
+         <div style="display: flex;">
+          <div class="form-input" >
+            <label for="holder-name">EXP. DATE (MM/YY)</label>
+            <div style="display: flex; align-items: center; justify-content: center; justify-content: space-between">
+            <input style="width: 60px;" type="text" id="holder-name" name="holder-name" placeholder="MM" maxlength="2" oninput="monthChanged(this.value)" required>
+            <input style="width: 60px;" type="text" id="holder-name" name="holder-name" placeholder="YY" maxlength="2" oninput="yearChanged(this.value)" required>
+            </div>
+            
           </div>
-          <div>
-             <label for="holder-name">CARDHOLDER NAME</label>
-              <input type="text" id="holder-name" name="holder-name" required>
+          <div class="form-input">
+             <label for="holder-name">CVV</label>
+              <input type="text" id="holder-name" name="holder-name" placeholder="e.g. 123" maxlength="3" oninput="cvvChanged(this.value)" required>
           </div>
         </div>
 
